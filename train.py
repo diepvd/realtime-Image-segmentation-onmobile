@@ -17,6 +17,7 @@ seed = 42
 np.random.seed(seed)
 tf.random.set_seed(seed)
 
+os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'
 
 PATH = "./data"
 TRAIN_CSV = "train.csv"
@@ -24,9 +25,12 @@ TEST_CSV = "valid.csv"
 
 WEIGHT_FILENAME = "hair_segmentation_mobile.h5"
 INPUT_SIZE = 192
-BATCH_SIZE = 32
+BATCH_SIZE = 8
 
-
+print(tf.__version__)
+print(tf.test.is_gpu_available(
+    cuda_only=False, min_cuda_compute_capability=None
+))
 def IOU(y_true, y_pred):
 
     smooth = 1e-6
