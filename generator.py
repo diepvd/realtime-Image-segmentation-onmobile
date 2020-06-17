@@ -14,9 +14,8 @@ np.random.seed(seed)
 def augmentation():
     aug = albu.Compose([
         albu.HorizontalFlip(p=0.5),
-        albu.ShiftScaleRotate(shift_limit=0.1, scale_limit=0.1, rotate_limit=20,
+        albu.ShiftScaleRotate(shift_limit=0.1, scale_limit=0.1, rotate_limit=30,
                               interpolation=1, border_mode=cv2.BORDER_CONSTANT, p=1),
-        albu.RandomBrightnessContrast(p=0.8),
         albu.RandomGamma(p=0.8)])
     return aug
 
