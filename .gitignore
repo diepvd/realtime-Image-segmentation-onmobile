@@ -120,5 +120,5 @@ outputs/*.jpg
 !/data/README.md
 
 #weights
-/weights/*
-!/weights/readme.txt
+# /weights/*
+# !/weights/readme.txt
