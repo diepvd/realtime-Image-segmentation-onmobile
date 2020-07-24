@@ -13,6 +13,20 @@ There are a few ways to increase inference time:
    * If making custom models try to use as less layers as possible.
       Decreasing depth of the model decreases the inference time more than decreasing the width of the model.
 
+## Demo
+
+Run model using [streamlit](https://www.streamlit.io/). Just run the below command after training the model.
+```
+streamlit run app.py
+```
+
+<p align="center" >
+  <a href="#readme">
+      <img alt="demo gif" src="media/streamlit-demo.gif" width="800",height="800">
+  </a>
+</p>
+
+
 ## Quick Start
 
 Run the model on an image by runnning below command.
@@ -64,15 +78,6 @@ I have done speed profiling of this model on **Oneplus 7** using [tensorflow ben
 <p align="center">
   <em>Groud truth</em>
 </p>
-
-## DEMO
-
-Run model using [streamlit](https://www.streamlit.io/). Just run the below command after training the model.
-```
-streamlit run app.py
-```
-
-![](./media/streamlit-demo.gif)
 
 
 ## Reference

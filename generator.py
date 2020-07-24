@@ -37,14 +37,13 @@ class DataGenerator(Sequence):
 
     def on_epoch_end(self):
 
-        if self.is_valid == False:
+        if self.is_valid is False:
             self.df = shuffle(self.df, random_state=seed)
             self.df.reset_index(inplace=True, drop=True)
 
     def __getitem__(self, idx):
 
         x_batch, y_batch = [], []
-        ym_batch = []
         start = idx*self.bs
         end = (idx+1)*self.bs
         image_ids = self.df.image_filename[start:end].values
